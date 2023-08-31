@@ -3,9 +3,9 @@ services:
   test:
     volumes:
       - ../:/app
+      - /home/alexander/personal_projects/fastapi/common/fastapi/:/usr/local/lib/python3.11/site-packages/common/fastapi/
+      - /home/alexander/personal_projects/environ/common/environ/:/usr/local/lib/python3.11/site-packages/common/environ/
+      - /home/alexander/personal_projects/db/common/db/:/usr/local/lib/python3.11/site-packages/common/db/
+      - /home/alexander/personal_projects/logging/common/logging/:/usr/local/lib/python3.11/site-packages/common/logging/
 # раскомментировать когда разрабатываешь одновременно все либы с использованием команды:
 # docker-compose -f ./build/docker-compose.test.yml -f ./docker-compose.test_local.yml
-#      - /home/alexander/personal_projects/fastapi/common/fastapi/:/usr/local/lib/python3.11/site-packages/common/fastapi/
-#      - /home/alexander/personal_projects/environ/common/environ/:/usr/local/lib/python3.11/site-packages/common/environ/
-#      - /home/alexander/personal_projects/db/common/db/:/usr/local/lib/python3.11/site-packages/common/db/
-#      - /home/alexander/personal_projects/logging/common/logging/:/usr/local/lib/python3.11/site-packages/common/logging/

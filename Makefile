@@ -11,4 +11,4 @@ fix_lint:
 	black ./source
 
 test:
-	docker-compose -f ./build/docker-compose.yml up test
+	docker-compose -f ./build/docker-compose.test.yml up test
