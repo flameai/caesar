@@ -1,9 +1,9 @@
-import logging
-
 from common.fastapi.app import App
+from common.db.postgres.fastapi import Postgres
+
 
 class CaesarApp(App):
-    pass
+    component_classes = [Postgres]
 
 
 app = CaesarApp()
