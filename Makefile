@@ -9,3 +9,6 @@ linter:
 
 fix_lint:
 	black ./source
+
+test:
+	docker-compose -f ./build/docker-compose.yml up test

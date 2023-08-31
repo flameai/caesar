@@ -1,9 +1,9 @@
 version: "3.4"
 services:
-  web:
+  test:
     image: caesar
     env_file:
       - ../.env
     ports:
       - 8000:8000
-    command: ["sh"]
+    command: ["sh", "./build/run_tests.sh"]

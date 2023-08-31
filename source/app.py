@@ -1,5 +1,6 @@
-from common.fastapi.app import App
+import logging
 
+from common.fastapi.app import App
 
 class CaesarApp(App):
     pass

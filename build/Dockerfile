@@ -5,8 +5,8 @@ WORKDIR /app
 COPY ./source/requirements.txt .
 
 RUN apk update && \
-    apk add --virtual .build_deps git && \
+    apk add --no-cache --virtual .build-deps git && \
     pip install -r ./requirements.txt && \
-    apk del .build_deps
+    apk del .build-deps
 
 COPY . .
