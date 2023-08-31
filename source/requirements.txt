@@ -3,6 +3,6 @@ alembic==1.11.3
 pytest==7.4.0
 
 common_db[Postgres] @ git+https://github.com/flameai/db.git@v0.0.1_dev#common_db
-git+https://github.com/flameai/fastapi.git@v0.0.1_dev#common_fastapi
 git+https://github.com/flameai/logging.git@v0.0.1_dev#common_logging
+git+https://github.com/flameai/fastapi.git@v0.0.1_dev#common_fastapi
 git+https://github.com/flameai/environ.git@v0.0.1_dev#common_environ

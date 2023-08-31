@@ -6,4 +6,4 @@ services:
       - ../.env
     ports:
       - 8000:8000
-    command: ["sh"]
+    command: ["python", "-m", "source.app"]
