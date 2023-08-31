@@ -5,6 +5,7 @@ alembic==1.11.3
 pytest==7.4.0
 httpx==0.24.1
 trio==0.22.2
+pytest-trio==0.8.0
 
 # My own libs dependencies
 common_db[Postgres] @ git+https://github.com/flameai/db.git@main#common_db
