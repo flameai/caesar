@@ -1,11 +1,14 @@
 SQLAlchemy==2.0.20
 alembic==1.11.3
 
-# Testing dependencies TODO (Возможно надо подумать об отдельном образе)
+# Testing dependencies TODO (Возможно, надо подумать об отдельном образе)
 pytest==7.4.0
 httpx==0.24.1
 trio==0.22.2
 pytest-trio==0.8.0
+
+# Lib for creating migrations
+psycopg2-binary==2.9.7
 
 # My own libs dependencies
 common_db[Postgres] @ git+https://github.com/flameai/db.git@main#common_db
