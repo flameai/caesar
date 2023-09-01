@@ -3,6 +3,7 @@ from sqlalchemy import ForeignKey
 
 from source.models.base import Base
 
+
 class M2MUserGroup(Base):
     __tablename__ = "m2m_users_groups"
 

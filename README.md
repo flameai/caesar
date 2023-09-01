@@ -37,8 +37,6 @@ make fix_lint
 make linter
 ```
 
-
-(Еще не сделано)
 ## Тестирование сервиса:
 ```sh
 make test

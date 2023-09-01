@@ -13,7 +13,7 @@ class EventType(Enum):
 
 
 class Audit(Base):
-    __tablename__ = 'audits'
+    __tablename__ = "audits"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     type: Mapped[EventType]
