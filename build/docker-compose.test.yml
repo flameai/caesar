@@ -7,8 +7,11 @@ services:
     ports:
       - "8000:8000"
     command: ["sh", "./build/run_tests.sh"]
+    restart: unless-stopped
     depends_on:
       postgres:
+        condition: service_healthy
+      redis:
         condition: service_healthy
 
   postgres:
@@ -17,8 +20,22 @@ services:
       - ../.env
     ports:
       - "5432:5432"
+    restart: always
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 1s
+      timeout: 1s
+      retries: 10
+
+  redis:
+    image: redis:7.2.0
+    env_file:
+      - ../.env
+    ports:
+      - "6379:6379"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
       interval: 1s
       timeout: 1s
       retries: 10

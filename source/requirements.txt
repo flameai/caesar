@@ -11,7 +11,7 @@ pytest-trio==0.8.0
 psycopg2-binary==2.9.7
 
 # My own libs dependencies
-common_db[Postgres] @ git+https://github.com/flameai/db.git@main#common_db
+common_db[Postgres, Redis] @ git+https://github.com/flameai/db.git@main#common_db
 git+https://github.com/flameai/logging.git@main#common_logging
 git+https://github.com/flameai/fastapi.git@main#common_fastapi
 git+https://github.com/flameai/environ.git@main#common_environ

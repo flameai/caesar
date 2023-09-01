@@ -4,6 +4,7 @@ from sqlalchemy import String
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
 from source.models.base import Base
+from source.models.m2m_user_group import M2MUserGroup
 
 
 class User(Base):
@@ -11,4 +12,4 @@ class User(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(64))
-    groups: Mapped[List["M2MUserGroup"]] = relationship()
+    groups: Mapped[List[M2MUserGroup]] = relationship()
