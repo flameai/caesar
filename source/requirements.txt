@@ -9,6 +9,6 @@ psycopg2-binary==2.9.7
 
 # Мои гранулированные либы (Демонстрация распространения пакетов через vcs)
 common_db[Postgres, Redis] @ git+https://github.com/flameai/db.git@main#common_db
-git+https://github.com/flameai/logging.git@main#common_logging
 git+https://github.com/flameai/environ.git@main#common_environ
+git+https://github.com/flameai/logging.git@main#common_logging
 git+https://github.com/flameai/fastapi.git@main#common_fastapi
