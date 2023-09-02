@@ -3,9 +3,6 @@ alembic==1.11.3
 
 # Testing dependencies TODO (Возможно, надо подумать об отдельном образе)
 pytest==7.4.0
-httpx==0.24.1
-trio==0.22.2
-pytest-trio==0.8.0
 
 # Lib for creating migrations
 psycopg2-binary==2.9.7
