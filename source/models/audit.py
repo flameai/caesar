@@ -17,6 +17,6 @@ class Audit(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     type: Mapped[EventType]
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    actor_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
     dt: Mapped[datetime]
-    m2m_user_group_id = mapped_column(ForeignKey("m2m_users_groups"), nullable=False)
+    m2m_user_group_id = mapped_column(ForeignKey("m2m_users_groups.id"), nullable=False)

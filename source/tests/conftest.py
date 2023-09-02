@@ -1,11 +1,10 @@
 import pytest
-from httpx import AsyncClient
+from fastapi.testclient import TestClient
 
 from source.app import app
-from common.fastapi.settings import APP_HOST, APP_PROTO
 
 
 @pytest.fixture
-async def test_cli():
-    async with AsyncClient(app=app, base_url=f"{APP_PROTO}://{APP_HOST}") as cli:
-        yield cli
+def test_cli():
+    with TestClient(app) as client:
+        yield client
