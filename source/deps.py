@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import Header, Request
+from fastapi import Header
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
@@ -8,5 +8,5 @@ def get_actor_id_from_header(x_actor_id: Annotated[str | None, Header()] = None)
     return x_actor_id
 
 
-def get_session(request: Request) -> AsyncSession:
-    return request.app.db
+def get_session() -> AsyncSession:
+    pass
