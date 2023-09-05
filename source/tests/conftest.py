@@ -8,7 +8,7 @@ from source.app import app
 
 
 @pytest.fixture
-async def test_cli():
+def test_cli():
     with TestClient(app) as client:
         yield client
 

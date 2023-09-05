@@ -4,6 +4,7 @@ from fastapi_utils.inferring_router import InferringRouter
 from fastapi_utils.cbv import cbv
 from fastapi import Depends
 from sqlalchemy import Select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from common.fastapi.config import ComponentCategoryGetterEnum, get_component
 
@@ -15,7 +16,7 @@ router = InferringRouter()
 
 @cbv(router)
 class GroupsView:
-    session: Depends(get_component(ComponentCategoryGetterEnum.RelationalDB))
+    session: AsyncSession = Depends(get_component(ComponentCategoryGetterEnum.RelationalDB))
 
     @router.get("/groups")
     async def get_group_list(self) -> List[GroupResponse]:
