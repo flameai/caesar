@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from common.fastapi.config import ComponentCategoryGetterEnum, get_component
+from common.fastapi.registry import ComponentCategoryEnum, get_db
 
 from source.models import Group
 from source.app import app
@@ -15,7 +15,7 @@ def test_cli():
 
 @pytest.fixture
 async def db_session():
-    return get_component(ComponentCategoryGetterEnum.RelationalDB)
+    return get_db()
 
 @pytest.fixture
 async def initial_data():

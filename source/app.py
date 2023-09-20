@@ -1,15 +1,16 @@
 from common.fastapi.app import App
 from common.db.postgres.fastapi import Postgres
 from common.db.redis.fastapi import Redis
+from common.fastapi.config import Config
 
 from source.endpoints.change_membership import router as membership_change_router
 
 
-class CaesarApp(App):
-    component_classes = [Postgres, Redis]
+Config.add_app_component_class(Postgres)
+Config.add_app_component_class(Redis)
 
+app = App()
 
-app = CaesarApp()
 app.include_router(membership_change_router)
 
 if __name__ == "__main__":
