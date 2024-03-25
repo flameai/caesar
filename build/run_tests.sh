@@ -1,4 +1,4 @@
 #!/bin/sh
-
-cd source/migrations && alembic upgrade head && cd - && \
+poetry shell && \
+cd caesar/migrations && alembic upgrade head && cd - && \
 pytest

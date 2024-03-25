@@ -3,8 +3,8 @@ from typing import List
 from sqlalchemy import String
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from source.models.base import Base
-from source.models.m2m_user_group import M2MUserGroup
+from caesar.models.base import Base
+from caesar.models.m2m_user_group import M2MUserGroup
 
 
 class User(Base):

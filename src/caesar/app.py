@@ -3,7 +3,7 @@ from common.db.postgres.fastapi import Postgres
 from common.db.redis.fastapi import Redis
 from common.fastapi.config import Config
 
-from source.endpoints.change_membership import router as membership_change_router
+from caesar.endpoints.change_membership import router as membership_change_router
 
 
 Config.add_app_component_class(Postgres)

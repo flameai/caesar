@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey, Index
 
-from source.models.base import Base
+from caesar.models.base import Base
 
 
 class M2MUserGroup(Base):

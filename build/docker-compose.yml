@@ -6,7 +6,7 @@ services:
       - ../.env
     ports:
       - "8000:8000"
-    command: ["sh", "./build/run.sh"]
+    command: ["sh", "./run.sh"]
     depends_on:
       postgres:
         condition: service_healthy

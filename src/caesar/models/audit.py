@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
-from source.models.base import Base
+from caesar.models.base import Base
 
 
 class EventType(Enum):

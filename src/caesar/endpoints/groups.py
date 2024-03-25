@@ -8,8 +8,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from common.fastapi.config import ComponentCategoryGetterEnum, get_component
 
-from source.models.group import Group
-from source.schemas.response import GroupResponse
+from caesar.models.group import Group
+from caesar.schemas.response import GroupResponse
 
 router = InferringRouter()
 

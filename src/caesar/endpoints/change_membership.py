@@ -12,6 +12,6 @@ router = InferringRouter(tags=["membership", "change"])
 class MembershipChangeView:
     session: AsyncSession = Depends(get_db)
 
-    @router.post("/api/v1/membership/{user_id}")
+    @router.post("/api/v1/users/{user_id:int}/change_membership")
     def change_membership(self, user_id):
         Response(status_code=200)

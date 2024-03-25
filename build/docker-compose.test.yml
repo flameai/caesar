@@ -6,7 +6,7 @@ services:
       - ../.env
     ports:
       - "8000:8000"
-    command: ["sh", "./build/run_tests.sh"]
+    command: ["sh", "./run_tests.sh"]
     restart: unless-stopped
     depends_on:
       postgres:

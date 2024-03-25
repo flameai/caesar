@@ -3,8 +3,8 @@ from fastapi.testclient import TestClient
 
 from common.fastapi.registry import ComponentCategoryEnum, get_db
 
-from source.models import Group
-from source.app import app
+from caesar.models import Group
+from caesar.app import app
 
 
 @pytest.fixture

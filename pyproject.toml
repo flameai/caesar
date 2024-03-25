@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "caesar"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Andryukov <andryukov@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "2.0.20"
+alembic = "1.11.3"
+psycopg2-binary = "^2.9.9"
+common-db = {git = "https://github.com/flameai/db.git", extras = ["Redis", "Postgres"]}
+common-environ = {git = "https://github.com/flameai/environ.git"}
+common-fastapi = {git = "https://github.com/flameai/fastapi.git"}
+common-logging = {git = "https://github.com/flameai/logging.git"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+ipdb = "^0.13.13"
+
+
+[tool.poetry.group.tests.dependencies]
+ipdb = "^0.13.13"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

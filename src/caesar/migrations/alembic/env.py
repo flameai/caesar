@@ -9,7 +9,7 @@ from alembic import context
 
 # Add app path
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
-from source.models.base import Base
+from caesar.models.base import Base
 
 
 # this is the Alembic Config object, which provides

@@ -1,4 +1,3 @@
 #!/bin/sh
-
-cd source/migrations && alembic upgrade head && cd - && \
-python -m source.app
+cd caesar/migrations && alembic upgrade head && cd - && \
+python -m caesar.app
