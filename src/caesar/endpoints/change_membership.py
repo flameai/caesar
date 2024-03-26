@@ -3,7 +3,7 @@ from fastapi_utils.cbv import cbv
 from fastapi import Depends, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from common.fastapi.registry import ComponentCategoryEnum, get_db
+from common.fastapi.registry import get_db
 
 router = InferringRouter(tags=["membership", "change"])
 

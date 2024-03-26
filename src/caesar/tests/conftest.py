@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from common.fastapi.registry import ComponentCategoryEnum, get_db
+from common.fastapi.registry import get_db
 
 from caesar.models import Group
 from caesar.app import app
@@ -16,6 +16,7 @@ def test_cli():
 @pytest.fixture
 async def db_session():
     return get_db()
+
 
 @pytest.fixture
 async def initial_data():

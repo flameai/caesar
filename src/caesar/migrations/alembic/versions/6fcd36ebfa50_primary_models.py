@@ -1,10 +1,11 @@
 """primary models
 
 Revision ID: 6fcd36ebfa50
-Revises: 
+Revises:
 Create Date: 2023-09-02 03:19:34.353200
 
 """
+
 from typing import Sequence, Union
 
 from alembic import op

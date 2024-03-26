@@ -16,7 +16,9 @@ router = InferringRouter()
 
 @cbv(router)
 class GroupsView:
-    session: AsyncSession = Depends(get_component(ComponentCategoryGetterEnum.RelationalDB))
+    session: AsyncSession = Depends(
+        get_component(ComponentCategoryGetterEnum.RelationalDB)
+    )
 
     @router.get("/groups")
     async def get_group_list(self) -> List[GroupResponse]:
