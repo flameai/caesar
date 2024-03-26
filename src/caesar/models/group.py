@@ -1,10 +1,11 @@
-from sqlalchemy.orm import mapped_column, Mapped
+from sqlalchemy.orm import mapped_column
 from sqlalchemy import String
 
 from caesar.models.base import Base
+from caesar.types import GroupId, GroupName
 
 
 class Group(Base):
     __tablename__ = "groups"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(64))
+    id: GroupId = mapped_column(primary_key=True)
+    name: GroupName = mapped_column(String(64))
