@@ -1,0 +1,33 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: local
+    hooks:
+    - id: trailing-whitespace
+      description: Trim whitespaces
+      entry: trailing-whitespace-fixer
+      language: system
+      name: trim trailing whitespaces
+      stages: [commit, manual]
+      exclude_types: [python, pyi]
+      types: [text]
+
+    - id: ruff-check
+      entry: ruff check --fix --show-fixes
+      exclude: ^build/
+      language: system
+      name: ruff check
+      pass_filenames: true
+      require_serial: true
+      types_or: [python, pyi]
+      stages: [commit]
+
+    - id: ruff-format
+      entry: ruff format
+      exclude: ^build/
+      language: system
+      name: ruff format
+      pass_filenames: true
+      require_serial: true
+      types_or: [  python, pyi ]
+      stages: [ commit ]

@@ -19,10 +19,11 @@ common-logging = {git = "https://github.com/flameai/logging.git"}
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.4"
 ipdb = "^0.13.13"
+pre-commit = "^3.7.0"
+pre-commit-hooks = "^4.5.0"
 
 
 [tool.poetry.group.tests.dependencies]
-ipdb = "^0.13.13"
 pytest = "^8.1.1"
 
 [build-system]
