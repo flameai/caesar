@@ -1,14 +1,14 @@
 from caesar.types import TimeLasted
 
 
-class UserDoesnotExist(Exception):
+class UserDoesnotExistError(Exception):
     pass
 
 
-class GroupDoesntExist(Exception):
+class GroupDoesntExistError(Exception):
     pass
 
 
-class NotEnoughTimeLasted(Exception):
+class NotEnoughTimeLastedError(Exception):
     def __init__(self, seconds: TimeLasted) -> None:
         self.second = seconds

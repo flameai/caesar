@@ -14,7 +14,7 @@ repos:
 
     - id: ruff-check
       entry: ruff check --fix --show-fixes
-      exclude: ^build/
+      exclude: ^build/|^src/caesar/migrations/|^src/caesar/tests
       language: system
       name: ruff check
       pass_filenames: true
@@ -24,7 +24,7 @@ repos:
 
     - id: ruff-format
       entry: ruff format
-      exclude: ^build/
+      exclude: ^build/|^src/caesar/migrations/|^src/caesar/tests
       language: system
       name: ruff format
       pass_filenames: true

@@ -1,16 +1,13 @@
-from logging.config import fileConfig
-import sys
 import os
-
-from sqlalchemy import engine_from_config
-from sqlalchemy import pool
+import sys
+from logging.config import fileConfig
 
 from alembic import context
+from sqlalchemy import engine_from_config, pool
 
 # Add app path
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
 from caesar.models.base import Base
-
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

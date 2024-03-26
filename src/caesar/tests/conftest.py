@@ -1,24 +1,23 @@
 import pytest
+from common.fastapi.registry import get_db
 from fastapi.testclient import TestClient
 
-from common.fastapi.registry import get_db
-
-from caesar.models import Group
 from caesar.app import app
+from caesar.models import Group
 
 
-@pytest.fixture
+@pytest.fixture()
 def test_cli():
     with TestClient(app) as client:
         yield client
 
 
-@pytest.fixture
+@pytest.fixture()
 async def db_session():
     return get_db()
 
 
-@pytest.fixture
+@pytest.fixture()
 async def initial_data():
     group1 = Group(name="admins")
     group2 = Group(name="users")
@@ -30,6 +29,6 @@ async def initial_data():
     return data
 
 
-@pytest.fixture
+@pytest.fixture()
 async def fill_and_clear_db(db_session):
     pass

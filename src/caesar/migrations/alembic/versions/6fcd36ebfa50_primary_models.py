@@ -6,17 +6,16 @@ Create Date: 2023-09-02 03:19:34.353200
 
 """
 
-from typing import Sequence, Union
+from collections.abc import Sequence
 
-from alembic import op
 import sqlalchemy as sa
-
+from alembic import op
 
 # revision identifiers, used by Alembic.
 revision: str = "6fcd36ebfa50"
-down_revision: Union[str, None] = None
-branch_labels: Union[str, Sequence[str], None] = None
-depends_on: Union[str, Sequence[str], None] = None
+down_revision: str | None = None
+branch_labels: str | Sequence[str] | None = None
+depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
@@ -61,13 +60,18 @@ def upgrade() -> None:
         unique=False,
     )
     op.create_index(
-        "user_group_together", "m2m_users_groups", ["user_id", "group_id"], unique=False
+        "user_group_together",
+        "m2m_users_groups",
+        ["user_id", "group_id"],
+        unique=False,
     )
     op.create_table(
         "audits",
         sa.Column("id", sa.Integer(), nullable=False),
         sa.Column(
-            "type", sa.Enum("INCLUDE", "EXCLUDE", name="eventtype"), nullable=False
+            "type",
+            sa.Enum("INCLUDE", "EXCLUDE", name="eventtype"),
+            nullable=False,
         ),
         sa.Column("actor_id", sa.Integer(), nullable=False),
         sa.Column("m2m_user_group_id", sa.Integer(), nullable=False),

@@ -1,5 +1,5 @@
-from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey, Index
+from sqlalchemy.orm import Mapped, mapped_column
 
 from caesar.models.base import Base
 

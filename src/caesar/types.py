@@ -1,6 +1,4 @@
-from sqlalchemy.orm import Mapped
-
-UserId = int | Mapped[int]
-GroupId = int | Mapped[int]
-GroupName = str | Mapped[str]
+UserId = int
+GroupId = int
+GroupName = str
 TimeLasted = int

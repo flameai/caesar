@@ -1,5 +1,5 @@
-from pydantic import conlist
 from fastapi_utils.api_model import APIModel
+from pydantic import conlist
 
 
 class ChangeMembershipRequestSchema(APIModel):
