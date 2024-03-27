@@ -41,6 +41,7 @@ poetry install --with dev, tests
 
 pre-commit install
 
+poetry shell
 ```
 
 #### Исправить форматирование
@@ -66,3 +67,11 @@ make linter
 make test
 
 ```
+
+#### TODO
+
+1. Перенести настройки приложения Config из FastAPI в Common.AppSettings
+2. Сделать cli на основе typer
+3. Сделать настоящие юнит-тесты слоя приложения в гексогональных рамках
+4. Дописать ручки
+5. Сделать воркер чтения изменений и посылки сообшений
