@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   test:
-    image: caesar
+    image: caesar-test
     env_file:
       - ../.env
     ports:

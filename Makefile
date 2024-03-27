@@ -13,5 +13,8 @@ linter:
 fix_lint:
 	ruff check ./src --fix
 
+test_image:
+	docker build -f ./build/test.Dockerfile -t caesar-test .
+
 test: test_image
 	docker-compose -f ./build/docker-compose.test.yml up test

@@ -1464,6 +1464,24 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["argcomplete (>=3.0.3)", "mypy (>=1.7.0)", "pre-commit", "pytest (>=7.0,<8.1)", "pytest-mock", "pytest-mypy-testing"]
 
 [[package]]
+name = "typer"
+version = "0.11.0"
+description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "typer-0.11.0-py3-none-any.whl", hash = "sha256:049cc47bef39f46b043eddd9165492209fdd9bc7d79afa7ba9cc5cd017caa817"},
+    {file = "typer-0.11.0.tar.gz", hash = "sha256:a6ce173c0f03d3a41b49c0a945874cc489e91f88faabf76517b2b91c670fcde7"},
+]
+
+[package.dependencies]
+click = ">=8.0.0"
+typing-extensions = ">=3.7.4.3"
+
+[package.extras]
+all = ["colorama (>=0.4.3,<0.5.0)", "rich (>=10.11.0,<14.0.0)", "shellingham (>=1.3.0,<2.0.0)"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.10.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -1526,4 +1544,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "27fa7e0033eab07a6dcbb26893b0ce1fd26d63c6aa5135020f7dee6e15ff0a9f"
+content-hash = "52e727a913d38b411ca02583b8e441523a3ca90b3f9b3bee8797845b9432a24b"
