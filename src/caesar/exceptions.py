@@ -1,7 +1,7 @@
 from caesar.types import TimeLasted
 
 
-class UserDoesnotExistError(Exception):
+class UserDoesntExistError(Exception):
     pass
 
 
