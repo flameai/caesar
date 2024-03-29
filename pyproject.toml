@@ -16,6 +16,7 @@ common-environ = {git = "https://github.com/flameai/environ.git"}
 common-fastapi = {git = "https://github.com/flameai/fastapi.git"}
 common-logging = {git = "https://github.com/flameai/logging.git"}
 typer = "^0.11.0"
+common-hexagonal = {git = "https://github.com/flameai/hexagonal.git"}
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.4"

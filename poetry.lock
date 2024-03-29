@@ -208,6 +208,21 @@ reference = "HEAD"
 resolved_reference = "8efbaa8339bf46bcc7096522c33e34785d35758d"
 
 [[package]]
+name = "common_hexagonal"
+version = "1.0.0"
+description = "My pesonal code for creating Hexagonal Driven Ports components implementation"
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/flameai/hexagonal.git"
+reference = "HEAD"
+resolved_reference = "a8e82bbe8248e62b7ed67d8345345b897bbb9a0d"
+
+[[package]]
 name = "common_logging"
 version = "1.0.0"
 description = "My customized library for using FastAPI framework"
@@ -1544,4 +1559,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "52e727a913d38b411ca02583b8e441523a3ca90b3f9b3bee8797845b9432a24b"
+content-hash = "5aea1348a1ff43106d872e4549016ab68297260be2d7b399553bd909831eafa5"
