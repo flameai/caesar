@@ -42,8 +42,7 @@ class TransactionMembershipChanger(BaseMembershipChanger):
 
     async def change_user_memberships(
         self, user_id: UserId, group_ids: list[GroupId]
-    ) -> None:
-        ...
+    ) -> None: ...
 
 
 class DetailedMembershipChanger(BaseMembershipChanger):
@@ -54,8 +53,7 @@ class DetailedMembershipChanger(BaseMembershipChanger):
 
     async def change_user_memberships(
         self, user_id: UserId, group_ids: list[GroupId]
-    ) -> None:
-        ...
+    ) -> None: ...
 
 
 membership_changer_mapping = {
@@ -84,8 +82,9 @@ class CaesarService:
     ) -> None:
         pass
 
-    def change_group_members(self, group_id: GroupId, user_ids: list[UserId]) -> None:
-        ...
+    def change_group_members(
+        self, group_id: GroupId, user_ids: list[UserId]
+    ) -> None: ...
 
     def get_group_members_by_name(self, group_name: GroupName) -> list[User]:
         return []
